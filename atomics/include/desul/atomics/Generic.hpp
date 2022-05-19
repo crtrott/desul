@@ -173,13 +173,13 @@ struct LoadOper {
 }  // namespace Impl
 }  // namespace desul
 
+#include <desul/atomics/Generic_Device.hpp>
+#include <desul/atomics/Generic_Host.hpp>
 #include <desul/atomics/CUDA.hpp>
 #include <desul/atomics/GCC.hpp>
 #include <desul/atomics/HIP.hpp>
 #include <desul/atomics/OpenMP.hpp>
 #include <desul/atomics/SYCL.hpp>
-#include <desul/atomics/Generic_Device.hpp>
-#include <desul/atomics/Generic_Host.hpp>
 
 namespace desul {
 

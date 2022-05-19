@@ -188,7 +188,7 @@ device_atomic_exchange(T* const dest, T value, MemoryOrderAcqRel, MemoryScope) {
 // Kokkos has that knowledge and so I use it here, allowing in Kokkos to use
 // clang with pre Volta as CUDA compiler
 #if (defined(__CUDA_ARCH__) && (__CUDA_ARCH__ >= 700)) || \
-    (!defined(__NVCC__) && !defined(DESUL_CUDA_ARCH_IS_PRE_VOLTA))
+    (!defined(__NVCC__) && !defined(DESUL_CUDA_ARCH_IS_PRE_VOLTA)) || true
 #include <desul/atomics/cuda/CUDA_asm_exchange.hpp>
 #endif
 
